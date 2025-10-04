@@ -27,7 +27,7 @@ A modern video calling application built with Next.js, featuring real-time video
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm, yarn, pnpm, or bun
 - Clerk account for authentication
 - Stream.io account for video features
@@ -35,12 +35,14 @@ A modern video calling application built with Next.js, featuring real-time video
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/itzRana13/zoom.git
 cd zoom
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -50,11 +52,13 @@ pnpm install
 ```
 
 3. Set up environment variables:
+
 ```bash
 cp .env.example .env.local
 ```
 
 4. Add your environment variables to `.env.local`:
+
 ```env
 # Clerk Authentication
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key_here
@@ -66,6 +70,7 @@ STREAM_SECRET_KEY=your_stream_secret_key_here
 ```
 
 5. Run the development server:
+
 ```bash
 npm run dev
 # or
@@ -78,23 +83,25 @@ pnpm dev
 
 ## 🔧 Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | Clerk publishable key | Yes |
-| `CLERK_SECRET_KEY` | Clerk secret key | Yes |
-| `NEXT_PUBLIC_STREAM_API_KEY` | Stream.io API key | Yes |
-| `STREAM_SECRET_KEY` | Stream.io secret key | Yes |
+| Variable                            | Description           | Required |
+| ----------------------------------- | --------------------- | -------- |
+| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | Clerk publishable key | Yes      |
+| `CLERK_SECRET_KEY`                  | Clerk secret key      | Yes      |
+| `NEXT_PUBLIC_STREAM_API_KEY`        | Stream.io API key     | Yes      |
+| `STREAM_SECRET_KEY`                 | Stream.io secret key  | Yes      |
 
 ## 📦 Deployment
 
 ### Deploy to Vercel
 
 1. Install Vercel CLI:
+
 ```bash
 npm i -g vercel
 ```
 
 2. Deploy to production:
+
 ```bash
 vercel --prod
 ```
@@ -107,11 +114,13 @@ vercel --prod
 ### Manual Deployment
 
 1. Build the application:
+
 ```bash
 npm run build
 ```
 
 2. Start the production server:
+
 ```bash
 npm start
 ```
