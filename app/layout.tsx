@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ClerkProvider
+        publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
         appearance={{
           layout: {
             socialButtonsVariant: "iconButton",

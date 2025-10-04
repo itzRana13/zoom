@@ -1,36 +1,153 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Yoom - Video Calling App
 
-## Getting Started
+A modern video calling application built with Next.js, featuring real-time video calls, meeting scheduling, and user authentication.
 
-First, run the development server:
+## 🚀 Live Demo
 
+**Production URL:** https://zoom-p1x6ah70e-itzrana13s-projects.vercel.app
+
+## ✨ Features
+
+- 🎥 Real-time video calling with Stream.io
+- 🔐 User authentication with Clerk
+- 📅 Meeting scheduling and management
+- 👥 Personal meeting rooms
+- 📱 Responsive design for all devices
+- 🎨 Modern UI with Tailwind CSS
+
+## 🛠️ Tech Stack
+
+- **Frontend:** Next.js 14, React 18, TypeScript
+- **Authentication:** Clerk
+- **Video SDK:** Stream.io
+- **Styling:** Tailwind CSS, Radix UI
+- **Deployment:** Vercel
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+- Clerk account for authentication
+- Stream.io account for video features
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/itzRana13/zoom.git
+cd zoom
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
+
+4. Add your environment variables to `.env.local`:
+```env
+# Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key_here
+CLERK_SECRET_KEY=your_clerk_secret_key_here
+
+# Stream.io Video SDK
+NEXT_PUBLIC_STREAM_API_KEY=your_stream_api_key_here
+STREAM_SECRET_KEY=your_stream_secret_key_here
+```
+
+5. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | Clerk publishable key | Yes |
+| `CLERK_SECRET_KEY` | Clerk secret key | Yes |
+| `NEXT_PUBLIC_STREAM_API_KEY` | Stream.io API key | Yes |
+| `STREAM_SECRET_KEY` | Stream.io secret key | Yes |
 
-## Learn More
+## 📦 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+### Deploy to Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Install Vercel CLI:
+```bash
+npm i -g vercel
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. Deploy to production:
+```bash
+vercel --prod
+```
 
-## Deploy on Vercel
+3. Add environment variables in Vercel dashboard:
+   - Go to your project settings
+   - Navigate to Environment Variables
+   - Add all required variables for Production environment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Manual Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Build the application:
+```bash
+npm run build
+```
+
+2. Start the production server:
+```bash
+npm start
+```
+
+## 🎯 Project Structure
+
+```
+zoom/
+├── app/                    # Next.js app directory
+│   ├── (auth)/            # Authentication pages
+│   ├── (root)/            # Main application pages
+│   └── globals.css        # Global styles
+├── components/            # Reusable components
+│   ├── ui/               # UI components
+│   └── ...               # Feature components
+├── hooks/                # Custom React hooks
+├── lib/                  # Utility functions
+├── providers/            # Context providers
+└── public/               # Static assets
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org/) for the amazing framework
+- [Clerk](https://clerk.com/) for authentication
+- [Stream.io](https://getstream.io/) for video SDK
+- [Vercel](https://vercel.com/) for deployment platform
